@@ -32,7 +32,7 @@ DB_NAME = os.environ.get("DATABASE_NAME", "Cluster0")
 
 SHORTLINK_URL = os.environ.get("SHORTLINK_URL", "vnshortener.com")
 SHORTLINK_API = os.environ.get("SHORTLINK_API", "fd3947a82f375d52856ebe596f0085fd986a8469")
-VERIFY_EXPIRE = int(os.environ.get('VERIFY_EXPIRE', 600)) # Add time in seconds
+VERIFY_EXPIRE = int(os.environ.get('VERIFY_EXPIRE', 1800)) # Add time in seconds
 IS_VERIFY = os.environ.get("IS_VERIFY", "True")
 TUT_VID = os.environ.get("TUT_VID", "https://t.me/+PZfHvzjSiZc4OGE1") # shareus ka tut_vid he 
 
@@ -42,7 +42,7 @@ FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "-1002200959530"))
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 
 #start message
-START_MSG = os.environ.get("START_MESSAGE", "Hello {first}\n\nI can store private files in Specified Channel and other users can access it from special link.")
+START_MSG = os.environ.get("START_MESSAGE", "Hello {first}\n\nI ᴀᴍ ᴀ ᴀᴅᴜʟᴛ ғɪʟᴇs ʙᴏᴛ ᴍᴀɴᴀɢᴇʀ ᴡʜᴏ ᴡɪʟʟ ɢɪᴠᴇ ʏᴏᴜ 30 ᴍɪɴɪᴛᴇs ᴏғ ᴜɴʟɪᴍɪᴛᴇᴅ ᴀᴄᴄᴇss ᴏғ ᴍᴇ ᴀɴᴅ ᴍʏ ᴏᴡɴᴇʀ ᴄʜᴀɴɴᴇʟ")
 try:
     ADMINS=[]
     for x in (os.environ.get("ADMINS", "5296584067").split()):
@@ -51,7 +51,7 @@ except ValueError:
         raise Exception("Your Admins list does not contain valid integers.")
 
 #Force sub message 
-FORCE_MSG = os.environ.get("FORCE_SUB_MESSAGE", "Hello {first}\n\n<b>You need to join in my Channel/Group to use me\n\nKindly Please join Channel</b>")
+FORCE_MSG = os.environ.get("FORCE_SUB_MESSAGE", "Hello {first}\n\n<b>Yᴏᴜ ʜᴀᴠᴇɴ'ᴛ ᴊᴏɪɴᴇᴅ ᴍʏ ᴏᴡɴᴇʀ ᴄʜɴᴀɴɴᴇʟ \n\nJᴏɪɴ ɴᴏᴡ ᴛᴏ ᴜsᴇ ᴍᴇ</b>")
 
 #set your Custom Caption here, Keep None for Disable Custom Caption
 CUSTOM_CAPTION = os.environ.get("CUSTOM_CAPTION", "This video is available on the internet. We HenFlow or its subsidiary channel doesn't produce any of them.")
