@@ -150,13 +150,13 @@ async def start_command(client: Client, message: Message):
             verify_status = await get_verify_status(id)
             if IS_VERIFY and not verify_status['is_verified']:
                 short_url = f"adrinolinks.in"
-                # TUT_VID = f"https://t.me/c/2200959530/8"
+                TUT_VID = "https://t.me/c/2200959530/8"
                 token = ''.join(random.choices(string.ascii_letters + string.digits, k=10))
                 await update_verify_status(id, verify_token=token, link="")
                 link = await get_shortlink(SHORTLINK_URL, SHORTLINK_API,f'https://telegram.dog/{client.username}?start=verify_{token}')
                 btn = [
                     [InlineKeyboardButton("Cʟɪᴄᴋ Hᴇʀᴇ", url=link)],
-                    [InlineKeyboardButton('Hᴏᴡ Tᴏ Vᴇʀɪғʏ', url=https://t.me/c/2200959530/8)]
+                    [InlineKeyboardButton('Hᴏᴡ Tᴏ Vᴇʀɪғʏ', url=TUT_VID]
                 ]
                 await message.reply(f"Yᴏᴜʀ Tᴏᴋᴇɴ Is Exᴘɪʀᴇᴅ Tᴀᴘ ᴛᴏ Cʟɪᴄᴋ Hᴇʀᴇ Bᴜᴛᴛᴏɴ Fᴏʀ Rᴇɴᴇᴡ\n\nTᴏᴋᴇɴ Tɪᴍᴇᴏᴜᴛ: {get_exp_time(VERIFY_EXPIRE)}\n\nWʜᴀᴛ ɪs Tᴏᴋᴇɴ ? Tᴏᴋᴇɴ Wɪʟʟ Pʀᴏᴠɪᴅᴇ Yᴏᴜ 30 Mɪɴᴜᴛᴇs Pʀɪᴍɪᴜᴍ Aᴄᴄᴇss ᴏғ Mᴇ Cʟɪᴄᴋ Hᴏᴡ ᴛᴏ Vᴇʀɪғʏ Tᴏ Wᴀᴛᴄʜ Tᴜᴛᴏʀɪᴀʟ", reply_markup=InlineKeyboardMarkup(btn), protect_content=False, quote=True)
 
