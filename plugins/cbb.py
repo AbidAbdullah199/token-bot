@@ -10,7 +10,7 @@ async def cb_handler(client: Bot, query: CallbackQuery):
     data = query.data
     if data == "about":
         await query.message.edit_text(
-            text = f"<b>○ Oᴡɴᴇʀ : <a href='tg://user?id={OWNER_ID}'>D Lᴜғғʏ</a>\n○ Cʜᴀɴɴᴇʟ : <a href='https://t.me/AnimeQuestX'>Aɴɪᴍᴇ Qᴜᴇsᴛ</a>\n○ Oɴɢᴏɪɴɢ Cʜᴀɴɴᴇʟ : <a href='https://OngoingAnimeQuest'>Jᴏɪɴ Nᴏᴡ</a>\n○ Dɪsᴄᴜssɪᴛᴏɴ Cʜᴀɴɴᴇʟ : <a href='https://t.me/+r-x-wA4JT5gxZjVl'>Jᴏɪɴ Nᴏᴡ</a>\n○ Mᴀɴɢᴀ Cʜᴀɴɴᴇʟ : <a href'https://t.me/AnimeQuestManga'>Jᴏɪɴ Nᴏᴡ</a>\n○ Hɪɴᴅɪ Cʜᴀɴɴᴇʟ : <a href'https://t.me/AnimeQuestHindi'>Join Now</a></b>",
+            text = f"<b>○ Oᴡɴᴇʀ : <a href='tg://user?id={OWNER_ID}'>D Lᴜғғʏ</a>\n○ Cʜᴀɴɴᴇʟ : <a href='https://t.me/AnimeQuestX'>Aɴɪᴍᴇ Qᴜᴇsᴛ</a>\n○ Oɴɢᴏɪɴɢ Cʜᴀɴɴᴇʟ : <a href='https://t.me/OngoingAnimeQuest'>Jᴏɪɴ Nᴏᴡ</a>\n○ Dɪsᴄᴜssɪᴛᴏɴ Cʜᴀɴɴᴇʟ : <a href='https://t.me/+r-x-wA4JT5gxZjVl'>Jᴏɪɴ Nᴏᴡ</a>\n○ Mᴀɴɢᴀ Cʜᴀɴɴᴇʟ : <a href='https://t.me/AnimeQuestManga'>Jᴏɪɴ Nᴏᴡ</a>\n○ Hɪɴᴅɪ Cʜᴀɴɴᴇʟ : <a href='https://t.me/AnimeQuestHindi'>Join Now</a></b>",
             disable_web_page_preview = True,
             reply_markup = InlineKeyboardMarkup(
                 [
