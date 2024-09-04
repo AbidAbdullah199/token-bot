@@ -156,7 +156,7 @@ async def start_command(client: Client, message: Message):
                 link = await get_shortlink(SHORTLINK_URL, SHORTLINK_API,f'https://telegram.dog/{client.username}?start=verify_{token}')
                 btn = [
                     [InlineKeyboardButton("Cʟɪᴄᴋ Hᴇʀᴇ", url=link)],
-                    [InlineKeyboardButton('Hᴏᴡ Tᴏ Vᴇʀɪғʏ', url=TUT_VID]
+                    [InlineKeyboardButton('Hᴏᴡ Tᴏ Vᴇʀɪғʏ', url=TUT_VID)]
                 ]
                 await message.reply(f"Yᴏᴜʀ Tᴏᴋᴇɴ Is Exᴘɪʀᴇᴅ Tᴀᴘ ᴛᴏ Cʟɪᴄᴋ Hᴇʀᴇ Bᴜᴛᴛᴏɴ Fᴏʀ Rᴇɴᴇᴡ\n\nTᴏᴋᴇɴ Tɪᴍᴇᴏᴜᴛ: {get_exp_time(VERIFY_EXPIRE)}\n\nWʜᴀᴛ ɪs Tᴏᴋᴇɴ ? Tᴏᴋᴇɴ Wɪʟʟ Pʀᴏᴠɪᴅᴇ Yᴏᴜ 30 Mɪɴᴜᴛᴇs Pʀɪᴍɪᴜᴍ Aᴄᴄᴇss ᴏғ Mᴇ Cʟɪᴄᴋ Hᴏᴡ ᴛᴏ Vᴇʀɪғʏ Tᴏ Wᴀᴛᴄʜ Tᴜᴛᴏʀɪᴀʟ", reply_markup=InlineKeyboardMarkup(btn), protect_content=False, quote=True)
 
