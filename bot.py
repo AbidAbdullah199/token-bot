@@ -14,6 +14,8 @@ import pyrogram.utils
 pyrogram.utils.MIN_CHAT_ID = -999999999999
 pyrogram.utils.MIN_CHANNEL_ID = -100999999999999
 
+from plugins import autocontent.py
+
 class Bot(Client):
     def __init__(self):
         super().__init__(
