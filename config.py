@@ -13,7 +13,7 @@ APP_ID = int(os.environ.get("APP_ID", "26254064"))
 API_HASH = os.environ.get("API_HASH", "72541d6610ae7730e6135af9423b319c")
 
 #auto pick random content from channel id 
-RCHANNEL_ID = int(os.environ.get("CT_CNL_ID", "-1002200959530"))
+RCHANNEL_ID = int(os.environ.get("RCHANNEL_ID", "-1002200959530"))
 
 #Your db channel Id
 CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1002197524254"))
