@@ -9,7 +9,7 @@ from datetime import datetime
 import random
 import time
 
-from config import API_HASH, APP_ID, LOGGER, TG_BOT_TOKEN, TG_BOT_WORKERS, FORCE_SUB_CHANNEL, CHANNEL_ID, PORT, CT_CNL_ID
+from config import API_HASH, APP_ID, LOGGER, TG_BOT_TOKEN, TG_BOT_WORKERS, FORCE_SUB_CHANNEL, CHANNEL_ID, PORT, RCHANNEL_ID
 import pyrogram.utils
 
 pyrogram.utils.MIN_CHAT_ID = -999999999999
