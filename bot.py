@@ -35,6 +35,7 @@ class Bot(Client):
         usr_bot_me = await self.get_me()
         self.uptime = datetime.now()
 
+        # Check for forced subscription channel
         if FORCE_SUB_CHANNEL:
             try:
                 link = (await self.get_chat(FORCE_SUB_CHANNEL)).invite_link
@@ -48,6 +49,19 @@ class Bot(Client):
                 self.LOGGER(__name__).warning(f"Please Double check the FORCE_SUB_CHANNEL value and Make sure Bot is Admin in channel with Invite Users via Link Permission, Current Force Sub Channel Value: {FORCE_SUB_CHANNEL}")
                 self.LOGGER(__name__).info("\nBot Stopped. Join https://t.me/ultroid_official for support")
                 sys.exit()
+
+        # Check if the bot can read data from RCHANNEL_ID
+        if RCHANNEL_ID:
+            try:
+                # Attempt to get the channel data
+                await self.get_chat(RCHANNEL_ID)
+                self.LOGGER(__name__).info(f"Bot has access to RCHANNEL_ID: {RCHANNEL_ID}")
+            except Exception as e:
+                self.LOGGER(__name__).warning(f"Error accessing RCHANNEL_ID: {e}")
+                self.LOGGER(__name__).warning("Please ensure the bot is an admin in the channel and that RCHANNEL_ID is set correctly.")
+                self.LOGGER(__name__).info("\nBot Stopped. Join https://t.me/ultroid_official for support")
+                sys.exit()
+
         try:
             db_channel = await self.get_chat(CHANNEL_ID)
             self.db_channel = db_channel
@@ -67,11 +81,12 @@ class Bot(Client):
 ░╚════╝░░╚════╝░╚═════╝░╚══════╝
                                           """)
         self.username = usr_bot_me.username
-        #web-response
+        # web-response
         app = web.AppRunner(await web_server())
         await app.setup()
         bind_address = "0.0.0.0"
         await web.TCPSite(app, bind_address, PORT).start()
+
 
     async def stop(self, *args):
         await super().stop()
