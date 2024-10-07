@@ -1,10 +1,10 @@
 import random
 from pyrogram import Client, filters
 from motor.motor_asyncio import AsyncIOMotorClient
-from config import RCHANNEL_ID, DB_URL  # Using DB_URL for MongoDB URI
+from config import RCHANNEL_ID, DB_URI  # Using DB_URL for MongoDB URI
 
 # Initialize MongoDB client and database
-mongo_client = AsyncIOMotorClient(DB_URL)
+mongo_client = AsyncIOMotorClient(DB_URI)
 db = mongo_client["telegram_bot"]
 photo_collection = db["photos"]
 
